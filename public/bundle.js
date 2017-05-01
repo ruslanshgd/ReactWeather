@@ -24965,7 +24965,7 @@
 	          React.createElement(
 	            'li',
 	            { className: 'menu-text' },
-	            'RSGD Weather App'
+	            'RSGD \u041F\u043E\u0433\u043E\u0434\u0430'
 	          ),
 	          React.createElement(
 	            'li',
@@ -24973,7 +24973,7 @@
 	            React.createElement(
 	              IndexLink,
 	              { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	              'Get Weather'
+	              '\u0423\u0437\u043D\u0430\u0442\u044C \u043F\u043E\u0433\u043E\u0434\u0443'
 	            )
 	          ),
 	          React.createElement(
@@ -24982,7 +24982,7 @@
 	            React.createElement(
 	              Link,
 	              { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	              'About'
+	              '\u041E \u043F\u0440\u043E\u0435\u043A\u0442\u0435'
 	            )
 	          ),
 	          React.createElement(
@@ -24991,7 +24991,7 @@
 	            React.createElement(
 	              Link,
 	              { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	              'Examples'
+	              '\u041F\u0440\u0438\u043C\u0435\u0440\u044B'
 	            )
 	          )
 	        )
@@ -25126,7 +25126,7 @@
 	        React.createElement(
 	          'button',
 	          null,
-	          'Get Weather'
+	          '\u0423\u0437\u043D\u0430\u0442\u044C \u043F\u043E\u0433\u043E\u0434\u0443'
 	        )
 	      )
 	    );
@@ -25150,9 +25150,9 @@
 	  return React.createElement(
 	    'h3',
 	    null,
-	    'It\'s it ',
+	    '\u0421\u0435\u0439\u0447\u0430\u0441: ',
 	    temp,
-	    ' in ',
+	    ' \u0432 \u0433\u043E\u0440\u043E\u0434\u0435: ',
 	    location,
 	    '.'
 	  );
@@ -28714,23 +28714,52 @@
 /* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var About = function About(props) {
 	  return React.createElement(
-	    'div',
+	    "div",
 	    null,
 	    React.createElement(
-	      'h3',
+	      "h1",
 	      null,
-	      'About'
+	      "\u041E \u043F\u0440\u043E\u0435\u043A\u0442\u0435"
 	    ),
 	    React.createElement(
-	      'p',
+	      "p",
 	      null,
-	      'Welcome to the about page.'
+	      "\u042D\u0442\u043E \u043F\u043E\u0433\u043E\u0434\u043D\u043E\u0435 \u0432\u0435\u0431-\u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435, \u043A\u043E\u0442\u043E\u0440\u043E\u0435 \u0441\u0434\u0435\u043B\u0430\u043D\u043E \u043D\u0430 React'\u0435. \u0414\u0430\u043D\u043D\u043E\u0435 \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u0435 \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u0447\u0430\u0441\u0442\u044C\u044E \u043A\u0443\u0440\u0441\u0430 \u043F\u043E React, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u044F \u043F\u0440\u043E\u0445\u043E\u0436\u0443"
+	    ),
+	    React.createElement(
+	      "p",
+	      null,
+	      "\u0412\u043E\u0442 \u0447\u0442\u043E \u044F \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043B \u0434\u043B\u044F \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u044F \u043F\u0440\u0438\u043B\u043E\u0436\u0435\u043D\u0438\u044F:"
+	    ),
+	    React.createElement(
+	      "ul",
+	      null,
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "https://facebook.github.io/react" },
+	          "React"
+	        ),
+	        " \u2013 \u044D\u0442\u043E JS \u0444\u0440\u0435\u0439\u043C\u0432\u043E\u0440\u043A, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u0431\u044B\u043B \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043D"
+	      ),
+	      React.createElement(
+	        "li",
+	        null,
+	        React.createElement(
+	          "a",
+	          { href: "http://openweathermap.org" },
+	          "Open Weather Map"
+	        ),
+	        " \u2013 \u042F \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u043B \u0434\u0430\u043D\u043D\u044B\u0435 \u0441 Open Weather Map \u0434\u043B\u044F \u043F\u043E\u0438\u0441\u043A\u0430 \u043F\u043E\u0433\u043E\u0434\u044B \u043F\u043E \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u044E \u0433\u043E\u0440\u043E\u0434\u0430"
+	      )
 	    )
 	  );
 	};
@@ -28755,12 +28784,12 @@
 	    React.createElement(
 	      'h1',
 	      { className: 'text-center' },
-	      'Examples'
+	      '\u041F\u0440\u0438\u043C\u0435\u0440\u044B'
 	    ),
 	    React.createElement(
 	      'p',
 	      null,
-	      'Here are a few example locations to try out:'
+	      '\u0412\u043E\u0442 \u043F\u0430\u0440\u0443 \u043F\u0440\u0438\u043C\u0435\u0440\u043E\u0432 \u0433\u043E\u0440\u043E\u0434\u043E\u0432, \u043F\u043E\u0433\u043E\u0434\u0443 \u043A\u043E\u0442\u043E\u0440\u044B\u0445 \u043C\u043E\u0436\u043D\u043E \u0443\u0437\u043D\u0430\u0442\u044C:'
 	    ),
 	    React.createElement(
 	      'ol',
