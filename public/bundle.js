@@ -24954,7 +24954,14 @@
 
 	  onSearch: function onSearch(e) {
 	    e.preventDefault();
-	    alert('Not yet wired up!');
+
+	    var location = this.refs.search.value;
+	    var encodedLocation = encodeURIComponent(location);
+
+	    if (location.length > 0) {
+	      this.refs.search.value = '';
+	      window.location.hash = '#/?location=' + encodedLocation;
+	    }
 	  },
 	  render: function render() {
 	    return React.createElement(
@@ -25012,12 +25019,12 @@
 	            React.createElement(
 	              'li',
 	              null,
-	              React.createElement('input', { type: 'search', placeholder: '\u0412\u0432\u0435\u0434\u0438 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0433\u043E\u0440\u043E\u0434\u0430' })
+	              React.createElement('input', { type: 'search', placeholder: '\u0412\u0432\u0435\u0434\u0438 \u043D\u0430\u0437\u0432\u0430\u043D\u0438\u0435 \u0433\u043E\u0440\u043E\u0434\u0430', ref: 'search' })
 	            ),
 	            React.createElement(
 	              'li',
 	              null,
-	              React.createElement('input', { type: 'submit', className: 'button', value: 'Get Weather' })
+	              React.createElement('input', { type: 'submit', className: 'button', value: '\u0423\u0437\u043D\u0430\u0442\u044C \u043F\u043E\u0433\u043E\u0434\u0443' })
 	            )
 	          )
 	        )
@@ -25053,7 +25060,9 @@
 
 	    this.setState({
 	      isLoading: true,
-	      errorMessage: undefined
+	      errorMessage: undefined,
+	      location: undefined,
+	      temp: undefined
 	    });
 
 	    openWeatherMap.getTemp(location).then(function (temp) {
@@ -25068,6 +25077,22 @@
 	        errorMessage: e.message
 	      });
 	    });
+	  },
+	  componentDidMount: function componentDidMount() {
+	    var location = this.props.location.query.location;
+
+	    if (location && location.length > 0) {
+	      this.handleSearch(location);
+	      window.location.hash = '#/';
+	    }
+	  },
+	  componentWillReceiveProps: function componentWillReceiveProps(newProps) {
+	    var location = newProps.location.query.location;
+
+	    if (location && location.length > 0) {
+	      this.handleSearch(location);
+	      window.location.hash = '#/';
+	    }
 	  },
 	  render: function render() {
 	    var _state = this.state,
