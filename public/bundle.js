@@ -25069,9 +25069,9 @@
 	    function renderMessage() {
 	      if (isLoading) {
 	        return React.createElement(
-	          'h3',
-	          null,
-	          'Fetching weather...'
+	          'h4',
+	          { className: 'text-center' },
+	          '\u0423\u0437\u043D\u0430\u044E \u043F\u043E\u0433\u043E\u0434\u0443...'
 	        );
 	      } else if (temp && location) {
 	        return React.createElement(WeatherMessage, { temp: temp, location: location });
@@ -25082,9 +25082,9 @@
 	      'div',
 	      null,
 	      React.createElement(
-	        'h3',
-	        null,
-	        'Weather Component'
+	        'h1',
+	        { className: 'text-center' },
+	        '\u0423\u0437\u043D\u0430\u0439 \u043F\u043E\u0433\u043E\u0434\u0443'
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	      renderMessage()
@@ -25125,7 +25125,7 @@
 	        React.createElement('input', { type: 'text', ref: 'location' }),
 	        React.createElement(
 	          'button',
-	          null,
+	          { className: 'button expanded hollow' },
 	          '\u0423\u0437\u043D\u0430\u0442\u044C \u043F\u043E\u0433\u043E\u0434\u0443'
 	        )
 	      )
@@ -25139,7 +25139,7 @@
 /* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -25148,13 +25148,13 @@
 	      location = _ref.location;
 
 	  return React.createElement(
-	    'h3',
-	    null,
-	    '\u0421\u0435\u0439\u0447\u0430\u0441: ',
+	    "h4",
+	    { className: "text-center" },
+	    "\u0421\u0435\u0439\u0447\u0430\u0441: ",
 	    temp,
-	    ' \u0432 \u0433\u043E\u0440\u043E\u0434\u0435: ',
+	    " \u0432 \u0433\u043E\u0440\u043E\u0434\u0435: ",
 	    location,
-	    '.'
+	    "."
 	  );
 	};
 
